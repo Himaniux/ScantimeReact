@@ -1,0 +1,273 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: #0d3b4d;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping */
+  padding: 1.5rem 2rem;
+  background-color: #093340;
+}
+
+.header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap; /* Wrap nav items */
+  gap: 1rem;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin-left: .5rem;
+}
+
+.nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #093340;
+  border: 1px solid #0c4f52;
+  padding: 0.5rem 0;
+  border-radius: 5px;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dd-img {
+  height: 15px;
+  width: 15px;
+  filter: brightness(0) invert(1);
+  position: relative;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: #0d646a;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.login-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /* Add gap between items */
+  padding: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 45%;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  line-height: 1.3;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cfd8dc;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #37F3A6;
+  color: #00543C;
+  font-weight: bold;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary-icon {
+  margin-right: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #228c3c;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #50818F;
+  color: #D9F7FF;
+  border-radius: 30px;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #0d3b4d;
+}
+
+.footer {
+  background-color: #2F6275;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #D8F8FF;
+  letter-spacing: 1px;
+}
+
+.footer .trusted-companies {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+    position: relative;
+    overflow: hidden; 
+  
+}
+
+
+.footer .trusted-companies img {
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+
+@media (max-width: 1024px) {
+  .hero-content {
+    max-width: 100%; /* Full width */
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    box-shadow: none;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column; /* Stack navigation items */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    flex-direction: column; /* Stack hero content */
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 90%;
+  }
+
+  .footer .trusted-companies {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+  }
+}
