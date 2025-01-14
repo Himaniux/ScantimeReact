@@ -1,21 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
 
-const Hero = () => {
-  const [content, setContent] = useState('');
-
-  useEffect(() => {
-    axios
-      .get('http://localhost/wordpress/wp-json/wp/v2/pages/7') 
-      .then((response) => setContent(response.data.content.rendered))
-      .catch((error) => console.error(error));
-  }, []);
-
+function App() {
   return (
-    <section>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
-    </section>
+    <div className="App">
+      <Header />
+      <main>
+        <Hero />
+      </main>
+      <Footer />
+    </div>
   );
-};
+}
 
-export default Hero;
+export default App;
